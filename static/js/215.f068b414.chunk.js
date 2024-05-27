@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmuiproject=self.webpackChunkmuiproject||[]).push([[215],{3215:(e,i,c)=>{c.r(i),c.d(i,{default:()=>t});var l=c(1e3),r=c(5865),n=(c(5043),c(5810)),s=c(579);const t=()=>(0,s.jsx)(n.A,{children:(0,s.jsx)(l.A,{children:(0,s.jsx)(r.A,{variant:"h6",color:"initial",children:"lazy loading or code splitting"})})})}}]);
+//# sourceMappingURL=215.f068b414.chunk.js.map
