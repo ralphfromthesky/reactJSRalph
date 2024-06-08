@@ -14,6 +14,7 @@ function Feed() {
   const happening = [
     {
       name: "Ralph santolorin",
+      id: 1,
       date: "12/12/2015",
       img: "./image/withkids.jpg",
       about: "Yes its About me!",
@@ -33,6 +34,7 @@ function Feed() {
     },
     {
       name: "Hired as Software Engineer at  Human incubator inc.,",
+      id: 2,
       date: "7/19/2023 - 12-19-2024",
       img: "./image/6.jpg",
       about: "New Job!",
@@ -41,6 +43,7 @@ function Feed() {
     },
     {
       name: "Hired as Web Developer at  Fly Asian inc.,",
+      id: 3,
       date: "1/19/2023 - up to Present",
       img: "./image/2.jpg",
       about: "Exciting anouncement! New Job as WEB DEV!",
@@ -62,6 +65,7 @@ function Feed() {
     },
     {
       name: "Teaching kids to </Code>",
+      id: 4,
       date: "4/20/2020",
       img: "./image/7.jpg",
       about: "Teaching my kids to code is much better..",
@@ -81,6 +85,7 @@ function Feed() {
     },
     {
       name: "Ralph santolorin - Being a Solo Parent",
+      id: 5,
       date: "15/20/2024",
       img: "./image/solo.jpg",
       about: "Atlast na my solo parent na",
@@ -89,6 +94,7 @@ function Feed() {
     },
     {
       name: "Ralph santolorin",
+      id: 6,
       date: "3 times a week / 1.30 hrs",
       img: "./image/4.jpg",
       about: "GYM Time.....",

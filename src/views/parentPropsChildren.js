@@ -26,11 +26,15 @@ const PropsChildren = (props) => {
       <Typography variant="h3" color="initial">
         this is props come from parent - {props.newName}
       </Typography>
-      {objectFromParentPerson?.map((person) => (
-        <Typography variant="h2" sx={{ color: "blue" }}>
+      {objectFromParentPerson?.map((person, index) => (
+        <Typography variant="h2" sx={{ color: "blue" }} key={index}>
           this object comes from parent component array - {person.name}{" "}
           {person.lastName} -{person.location}
         </Typography>
+      ))}
+
+      {props.mgaStudyante.map((val, index) => (
+        <h1 key={index}>{val.name} - {index + 1}</h1>
       ))}
 
       <MyOwnModal

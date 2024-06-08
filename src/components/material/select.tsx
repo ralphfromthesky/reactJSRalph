@@ -24,9 +24,9 @@ export default function BasicSelect(props: any) {
           label="Age"
           onChange={handleChange}
         >
-          {props.newValue.map((a: any) => (
+          {props.newValue.map((a: any, index:any) => (
             
-            <MenuItem value={a.value}>{a.name}</MenuItem>
+            <MenuItem value={a.value} key={index}>{a.name}</MenuItem>
           ))}
         </Select>
       </FormControl>

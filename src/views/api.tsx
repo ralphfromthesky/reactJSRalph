@@ -54,7 +54,7 @@ const Api = () => {
         {isSuccess && (
           <Box sx={styler}>
             {prod?.data?.map((val: any, ind: any) => (
-              <ul>
+              <ul key={ind}>
                 <li> {val.title}</li>
               </ul>
             ))}
@@ -64,15 +64,15 @@ const Api = () => {
         {suck && (
           <Box sx={{ ...styler, border: "5px solid #7b1fa2" }}>
             {prod2?.data?.products?.map((val: any, ind: any) => (
-              <ul>
+              <ul key={ind}>
                 <li> {val.title}</li>
               </ul>
             ))}
           </Box>
         )}
         <Box sx={{...styler, border: '5px solid #c62828'}}>
-          {useData?.data?.map((value: any) => (
-              <ul>
+          {useData?.data?.map((value: any, index: any) => (
+              <ul key={index}>
                 <li>{value.title}</li>
               </ul>
           ))}

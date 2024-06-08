@@ -49,7 +49,7 @@ function Post(props) {
   return (
     <Box flex={4}>
       {props.newPerson?.map((val, index) => (
-        <Card
+        <Card key={val.id}
           sx={{
             backgroundColor: dark ? "" : "#1c1e23",
             color: dark ? "" : "white",

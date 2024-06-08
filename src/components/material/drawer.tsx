@@ -10,7 +10,7 @@ export default function TemporaryDrawer(props) {
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const {dark}  = changeTheme()
+  const { dark } = changeTheme();
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -66,9 +66,8 @@ export default function TemporaryDrawer(props) {
           }}
         >
           {menuitems?.map((item, index) => (
-            <Box>
+            <Box key={item.text}>
               <Box
-                key={item.text}
                 //   disablePadding
                 onClick={() => navigate(item.path)}
                 style={location.pathname === item.path ? newStyle : {}}

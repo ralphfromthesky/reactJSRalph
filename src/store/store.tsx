@@ -108,9 +108,27 @@ export const setImageAvatar = create<avatar>((set) => ({
   avatarImage: "",
   avatarId: 0,
   setAvatar: (val, val2) => {
-    set(()=> ({
-      avatarImage:val,
-      avatarId: val2
-    }))
-  }
+    set(() => ({
+      avatarImage: val,
+      avatarId: val2,
+    }));
+  },
 }));
+
+type login = {
+  isLogin: Boolean;
+  balance: Number;
+  name: String;
+  isVip: Boolean;
+  setIslogin: (isLogin: Boolean, name: String) => void
+};
+
+export const setLogin = create<login>((set) => ({
+  isLogin: false,
+  name: "",
+  balance: 10000,
+  isVip: false,
+  setIslogin: (isLogin, name) => set({isLogin, name})
+}));
+
+

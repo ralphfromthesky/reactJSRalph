@@ -146,17 +146,29 @@ function UseState() {
     );
   };
 
+  const employee = [
+    {name: 'ralph', age: 10},
+    {name: 'tess', age: 15},
+    {name: 'lea', age: 20}
+
+  ]
+
   useEffect(() => {
     setAvatarId(window.sessionStorage.getItem("avatarId"));
   }, [avatarId]);
+  
   return (
     <Main>
       <Box sx={{ marginBottom: "20px", color: dark ? "" : "white" }}>
         <Box textAlign={"center"}>
-          <Typography variant="h2" color="black"></Typography>
-          UseState
+          <Typography variant="h2" color="black">useState - {name}</Typography>
+          
         </Box>
+   
         <Box>{name}</Box>
+        {employee.map((val, index) => (
+          <h1 key={index}>{val.name} - {index + 1}</h1>
+        ))}
         <Button variant="contained" color="secondary" onClick={handleName}>
           change name
         </Button>

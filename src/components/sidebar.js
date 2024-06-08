@@ -30,10 +30,10 @@ import PetsIcon from "@mui/icons-material/Pets";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { changeTheme } from "../store/store.tsx";
 import TypeSpecimenIcon from "@mui/icons-material/TypeSpecimen";
-import PhishingIcon from '@mui/icons-material/Phishing';
-import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import WebhookIcon from '@mui/icons-material/Webhook';
+import PhishingIcon from "@mui/icons-material/Phishing";
+import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import WebhookIcon from "@mui/icons-material/Webhook";
 
 export const menuitems = [
   {
@@ -149,7 +149,6 @@ function Sidebar({ mode, setMode }, props) {
   const navigate = useNavigate();
   const location = useLocation();
 
-
   const newStyle = {
     background: dark ? "#1976d2" : "black",
     color: dark ? "white" : "white",
@@ -160,17 +159,20 @@ function Sidebar({ mode, setMode }, props) {
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position={"fixed"}>
         {menuitems?.map((item, index) => (
-          <Box>
+          <Box key={item.text}>
             <Box
-              key={item.text}
-              disablePadding
+              // disablePadding
               onClick={() => navigate(item.path)}
               style={location.pathname === item.path ? newStyle : {}}
-              sx={{ cursor: "pointer", display: 'flex', alignItems: 'center', gap: '10px', margin: '5px 0' }}
+              sx={{
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                margin: "5px 0",
+              }}
             >
-              <Box sx={{ color: dark ? "" : "white" }}>
-                {item.icon}
-              </Box>
+              <Box sx={{ color: dark ? "" : "white" }}>{item.icon}</Box>
               <ListItemText primary={item.text} />
             </Box>
             {/* <ListItem disablePadding>

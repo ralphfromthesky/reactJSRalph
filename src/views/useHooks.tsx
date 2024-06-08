@@ -7,7 +7,7 @@ import { useCatData } from "../react-query/catHooks.tsx";
 
 const UseHooks = () => {
   const { data, isError, isSuccess, isLoading, refetch, error} = useCatData();
-  const [state, toggle, datass] = useHooksChild();
+  const [state, toggle, datass, isLogin, setIsLogin] = useHooksChild();
   const [name, sampleToggle] = useMyCustomHooks()
   const {
     state: initialValue,
@@ -58,6 +58,14 @@ const UseHooks = () => {
           </Button>
         </Box>
         <br />
+        <Button variant="contained" onClick={() => setIsLogin(true)}>Open</Button>
+        {isLogin && (
+              <Box>
+                <h1>this render because of custom hooks isLogin is true</h1>
+                <Button variant="contained" onClick={() => setIsLogin(false)}>Close this</Button>
+              </Box>
+
+        )}
         <Box>
           <Typography variant="body1" color="initial">
             Custom hooks in React are reusable JavaScript functions that contain

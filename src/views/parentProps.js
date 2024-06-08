@@ -5,11 +5,10 @@ import PropsChildren from "./parentPropsChildren";
 import GlobalModal from "../components/material/globalModal";
 import { changeTheme } from "../store/store.tsx";
 
-
 const Parentprops = () => {
   const [modalFromChild, openModalFromChild] = useState(false);
   const [openGlobal, setOpenGlobalModal] = useState(false);
-  const {dark} = changeTheme();
+  const { dark } = changeTheme();
 
   const handleCloseGloabalModal = () => {
     setOpenGlobalModal(false);
@@ -23,7 +22,7 @@ const Parentprops = () => {
   };
 
   const notesFromParent = "this notes comes from parent";
-const customModa = 'fasdfasdfasdfasdfasdf12309'
+  const customModa = "fasdfasdfasdfasdfasdf12309";
   const person = [
     {
       name: "ralph",
@@ -43,10 +42,18 @@ const customModa = 'fasdfasdfasdfasdfasdf12309'
     ingredients2: "metal",
     ingredients3: "wood",
   };
+
+  const students = [
+    { name: "maris", age: 30, location: "navotas" },
+    { name: "bell", age: 35, location: "singapore" },
+    { name: "khalifa", age: 40, location: "manila" },
+  ];
   return (
     <Main>
       <Box sx={{ padding: "20px" }}>
-        <Typography  sx={{color: dark ? 'black' : 'white' }}>this props parent component</Typography>
+        <Typography sx={{ color: dark ? "black" : "white" }}>
+          this props parent component
+        </Typography>
         <Button variant="contained" color="error" onClick={handleOpenModal}>
           this modal is from child component
         </Button>
@@ -60,6 +67,7 @@ const customModa = 'fasdfasdfasdfasdfasdf12309'
           open global modal
         </Button>
         <PropsChildren
+          mgaStudyante={students}
           newName="i am ralph rigor santolorin"
           message="this message comes from parent"
           openModal={modalFromChild}
@@ -71,7 +79,12 @@ const customModa = 'fasdfasdfasdfasdfasdf12309'
         />
         <br />
         <Box>
-          <Typography variant="h6" color="initial" component="p"  sx={{color: dark ? 'black' : 'white' }}>
+          <Typography
+            variant="h6"
+            color="initial"
+            component="p"
+            sx={{ color: dark ? "black" : "white" }}
+          >
             Scenario: <br />
             In a React application, you often have components that need to share
             information. The parent component might have some data, and you want
@@ -90,7 +103,12 @@ const customModa = 'fasdfasdfasdfasdfasdf12309'
           <img src="image/props2.png" />
         </Box>
         <Box>
-          <Typography variant="h6" color="initial" component="p"  sx={{color: dark ? 'black' : 'white' }}>
+          <Typography
+            variant="h6"
+            color="initial"
+            component="p"
+            sx={{ color: dark ? "black" : "white" }}
+          >
             Explanation: <br /> In the ParentComponent, a variable (dataToSend)
             holds the data you want to send to the child component. The child
             component (ChildComponent) is rendered inside the parent, and the
@@ -113,7 +131,7 @@ const customModa = 'fasdfasdfasdfasdfasdf12309'
       <GlobalModal
         bukasOpen={openGlobal}
         saradoClose={handleCloseGloabalModal}
-        notesFromParent={notesFromParent}
+        msgFromParent={notesFromParent}
         objectFromParent={person}
       />
     </Main>

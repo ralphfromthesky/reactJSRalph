@@ -32,7 +32,10 @@ const Main = (props) => {
             <Box
               sx={{
                 width: { xs: "100%", sm: "50vw" },
-                padding: {xs: '10px'}
+                padding: {xs: '10px'},
+                backgroundColor: dark ? "white" : "#1c1e23",
+                color: dark ? "" : "white",
+                zIndex: '10'
               }}
             >
               {props.children}
